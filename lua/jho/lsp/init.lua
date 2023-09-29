@@ -294,33 +294,6 @@ for server, config in pairs(servers) do
   setup_server(server, config)
 end
 
---[ An example of using functions...
--- 0. nil -> do default (could be enabled or disabled)
--- 1. false -> disable it
--- 2. true -> enable, use defaults
--- 3. table -> enable, with (some) overrides
--- 4. function -> can return any of above
---
--- vim.lsp.handlers["textDocument/publishDiagnostics"] = function(err, method, params, client_id, bufnr, config)
---   local uri = params.uri
---
---   vim.lsp.with(
---     vim.lsp.diagnostic.on_publish_diagnostics, {
---       underline = true,
---       virtual_text = true,
---       signs = sign_decider,
---       update_in_insert = false,
---     }
---   )(err, method, params, client_id, bufnr, config)
---
---   bufnr = bufnr or vim.uri_to_bufnr(uri)
---
---   if bufnr == vim.api.nvim_get_current_buf() then
---     vim.lsp.diagnostic.set_loclist { open_loclist = false }
---   end
--- end
---]]
-
 require("null-ls").setup {
   sources = {
     -- require("null-ls").builtins.formatting.stylua,

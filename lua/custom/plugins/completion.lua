@@ -8,6 +8,7 @@ return {
   { "hrsh7th/cmp-nvim-lsp" },
   { "onsails/lspkind-nvim" },
   { "saadparwaiz1/cmp_luasnip", dependencies = { "L3MON4D3/LuaSnip" } },
+  { "rafamadriz/friendly-snippets" },
   { "tamago324/cmp-zsh" },
 
   -- {

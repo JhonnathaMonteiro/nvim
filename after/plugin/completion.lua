@@ -1,5 +1,3 @@
-local is_wsl = vim.env.USER == "tj-wsl"
-
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 -- Don't show the dumb matching stuff.
@@ -33,6 +31,8 @@ lspkind.init {
 vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 
 local cmp = require "cmp"
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup {
   mapping = {
@@ -70,40 +70,11 @@ cmp.setup {
         end
       end,
     },
-
-    -- ["<tab>"] = false,
     ["<tab>"] = cmp.config.disable,
-
-    -- ["<tab>"] = cmp.mapping {
-    --   i = cmp.config.disable,
-    --   c = function(fallback)
-    --     fallback()
-    --   end,
-    -- },
-
-    -- Testing
-    ["<c-q>"] = cmp.mapping.confirm {
+    ["<CR>"] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = false,
     },
-
-    -- If you want tab completion :'(
-    --  First you have to just promise to read `:help ins-completion`.
-    --
-    -- ["<Tab>"] = function(fallback)
-    --   if cmp.visible() then
-    --     cmp.select_next_item()
-    --   else
-    --     fallback()
-    --   end
-    -- end,
-    -- ["<S-Tab>"] = function(fallback)
-    --   if cmp.visible() then
-    --     cmp.select_prev_item()
-    --   else
-    --     fallback()
-    --   end
-    -- end,
   },
 
   -- Youtube:
