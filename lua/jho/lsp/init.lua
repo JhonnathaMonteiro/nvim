@@ -50,6 +50,25 @@ local filetype_attach = setmetatable({
     autocmd_format(false)
   end,
 
+
+  ocaml = function()
+    -- Display type information
+    autocmd_clear { group = augroup_codelens, buffer = 0 }
+    autocmd {
+      { "BufEnter", "BufWritePost", "CursorHold" },
+      augroup_codelens,
+      require("jho.lsp.codelens").refresh_virtlines,
+      0,
+    }
+
+    vim.keymap.set(
+      "n",
+      "<space>tt",
+      require("jho.lsp.codelens").toggle_virtlines,
+      { silent = true, desc = "[T]oggle [T]ypes", buffer = 0 }
+    )
+  end,
+
   ruby = function()
     autocmd_format(false)
   end,
@@ -230,6 +249,16 @@ local servers = {
     flags = {
       debounce_text_changes = 200,
     },
+  },
+
+  ocamllsp = {
+    settings = {
+      codelens = { enable = true },
+    },
+
+    get_language_id = function(_, ftype)
+      return ftype
+    end,
   },
 
   omnisharp = {

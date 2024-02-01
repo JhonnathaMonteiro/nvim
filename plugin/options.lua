@@ -29,6 +29,9 @@ opt.updatetime = 1000 -- Make updates happen faster
 opt.hlsearch = true -- I wouldn't use this without my DoNoHL function
 opt.scrolloff = 10 -- Make it so there are always ten lines below my cursor
 
+local opamshare = vim.fn.substitute(vim.fn.system('opam config var share'), '\n$', '', '')
+vim.o.runtimepath = vim.o.runtimepath .. ',' .. opamshare .. '/merlin/vim'
+
 -- opt.smoothscroll = true
 
 -- Cursorline highlighting control

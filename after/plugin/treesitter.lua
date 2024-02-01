@@ -33,7 +33,8 @@ local _ = require("nvim-treesitter.configs").setup {
     "typescript",
     "vim",
     "vimdoc",
-    "lua"
+    "lua",
+    "ocaml"
     -- my own...
   },
 
@@ -159,6 +160,7 @@ local _ = require("nvim-treesitter.configs").setup {
 
 require("treesitter-context").setup { enable = true }
 vim.treesitter.query.set("lua", "context", "")
+vim.treesitter.query.set("ocaml", "context", "")
 
 vim.cmd [[highlight IncludedC guibg=#373b41]]
 
