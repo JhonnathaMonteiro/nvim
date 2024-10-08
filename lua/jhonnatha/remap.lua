@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- using yazi for now
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- drag line
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -31,6 +32,11 @@ vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+-- Arrow
+-- vim.keymap.set("n", "H", require("arrow.persist").previous)
+-- vim.keymap.set("n", "L", require("arrow.persist").next)
+-- vim.keymap.set("n", "<C-s>", require("arrow.persist").toggle)
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
