@@ -1,1 +1,2 @@
 require("jhonnatha")
+ColorMyPencils()
