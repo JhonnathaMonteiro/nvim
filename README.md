@@ -22,3 +22,5 @@ source /path/to/config.vim
 laksjd
 kljasdlk
 alksdj
+alksjd:w
+
