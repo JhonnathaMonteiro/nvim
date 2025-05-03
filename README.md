@@ -39,3 +39,4 @@ https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu
 ### luarocks
 
 ```sudo apt install luarocks```
+l
