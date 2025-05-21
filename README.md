@@ -1,5 +1,3 @@
-
-asjdlkasc
 ## CONFIG FILES
 
 This is the directory where you can store your configuration files.
