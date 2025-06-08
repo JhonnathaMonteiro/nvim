@@ -45,3 +45,4 @@ https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu
 https://yazi-rs.github.io/docs/installation/#source
 
 laksjd
+as;ldkasd
