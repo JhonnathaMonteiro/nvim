@@ -41,6 +41,5 @@ https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu
 ```sudo apt install luarocks```
 
 ### yazi
-lkajsd
 
 https://yazi-rs.github.io/docs/installation/#source
