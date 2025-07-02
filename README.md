@@ -43,3 +43,4 @@ https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu
 ### yazi
 
 https://yazi-rs.github.io/docs/installation/#source
+kljlkajsdasd
